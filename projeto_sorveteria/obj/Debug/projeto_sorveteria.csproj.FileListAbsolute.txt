@@ -1,0 +1,9 @@
+E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\bin\Debug\projeto_sorveteria.exe.config
+E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\bin\Debug\projeto_sorveteria.exe
+E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\bin\Debug\projeto_sorveteria.pdb
+E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.csprojResolveAssemblyReference.cache
+E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.Form1.resources
+E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.Properties.Resources.resources
+E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.csproj.GenerateResource.Cache
+E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.exe
+E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.pdb
