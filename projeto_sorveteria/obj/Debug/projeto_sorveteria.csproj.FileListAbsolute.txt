@@ -7,3 +7,6 @@ E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.
 E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.csproj.GenerateResource.Cache
 E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.exe
 E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.pdb
+C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\bin\Debug\projeto_sorveteria.exe.config
+C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\obj\Debug\projeto_sorveteria.exe
+C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\obj\Debug\projeto_sorveteria.pdb

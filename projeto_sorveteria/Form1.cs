@@ -17,8 +17,8 @@ namespace projeto_sorveteria
             InitializeComponent();
         }
 
-        public static int dinheiro;
-        public static int quantidade;
+        public static double dinheiro;
+        public static double quantidade;
         
         private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -59,6 +59,17 @@ namespace projeto_sorveteria
                 double.Parse(txtTotal.Text += 3.50);
             }
         }
-        
+
+        private void cbxQuantidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            double total = double.Parse(txtTotal.Text);//variável que armazena o valor do textbox Total
+
+            if (cbxQuantidade.Text == "1")
+            {
+                quantidade = double.Parse(cbxQuantidade.Text);
+                double.Parse(txtTotal.Text) *= double.Parse(txtTotal.Text);
+            }
+
+        }
     }
 }
