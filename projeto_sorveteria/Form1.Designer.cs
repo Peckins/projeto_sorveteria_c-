@@ -33,16 +33,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbxQuantidade = new System.Windows.Forms.ComboBox();
             this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbxFrescuras = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.cbxCobertura = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbxFlocos = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbxCreme = new System.Windows.Forms.ComboBox();
+            this.cbxBolas = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtDinheiro = new System.Windows.Forms.TextBox();
@@ -51,7 +50,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.cbxQuantidade = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -102,6 +100,27 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Quantidade:";
             // 
+            // cbxQuantidade
+            // 
+            this.cbxQuantidade.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.cbxQuantidade.FormattingEnabled = true;
+            this.cbxQuantidade.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cbxQuantidade.Location = new System.Drawing.Point(329, 28);
+            this.cbxQuantidade.Name = "cbxQuantidade";
+            this.cbxQuantidade.Size = new System.Drawing.Size(72, 21);
+            this.cbxQuantidade.TabIndex = 5;
+            this.cbxQuantidade.SelectedIndexChanged += new System.EventHandler(this.cbxQuantidade_SelectedIndexChanged);
+            // 
             // cbxTipo
             // 
             this.cbxTipo.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -130,48 +149,18 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Controls.Add(this.cbxFrescuras);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.cbxCobertura);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.cbxFlocos);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.cbxCreme);
+            this.groupBox2.Controls.Add(this.cbxBolas);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(91, 138);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(424, 116);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Bolas";
-            // 
-            // cbxFrescuras
-            // 
-            this.cbxFrescuras.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.cbxFrescuras.FormattingEnabled = true;
-            this.cbxFrescuras.Items.AddRange(new object[] {
-            "Tomate",
-            "Sal",
-            "Cuminho",
-            "Coloral",
-            "Cuentro",
-            "Salcinha",
-            "Granulado",
-            "Pedra"});
-            this.cbxFrescuras.Location = new System.Drawing.Point(290, 73);
-            this.cbxFrescuras.Name = "cbxFrescuras";
-            this.cbxFrescuras.Size = new System.Drawing.Size(121, 21);
-            this.cbxFrescuras.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(209, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 17);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Frescuras:";
+            this.groupBox2.Text = "Incrementos";
             // 
             // cbxCobertura
             // 
@@ -182,16 +171,16 @@
             "Morango",
             "Bosta de camelo",
             "Leite condensado"});
-            this.cbxCobertura.Location = new System.Drawing.Point(82, 73);
+            this.cbxCobertura.Location = new System.Drawing.Point(141, 73);
             this.cbxCobertura.Name = "cbxCobertura";
-            this.cbxCobertura.Size = new System.Drawing.Size(121, 21);
+            this.cbxCobertura.Size = new System.Drawing.Size(148, 21);
             this.cbxCobertura.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 74);
+            this.label6.Location = new System.Drawing.Point(65, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 16);
             this.label6.TabIndex = 5;
@@ -211,6 +200,7 @@
             this.cbxFlocos.Name = "cbxFlocos";
             this.cbxFlocos.Size = new System.Drawing.Size(121, 21);
             this.cbxFlocos.TabIndex = 3;
+            this.cbxFlocos.SelectedIndexChanged += new System.EventHandler(this.cbxFlocos_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -222,19 +212,20 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Flocos:";
             // 
-            // cbxCreme
+            // cbxBolas
             // 
-            this.cbxCreme.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.cbxCreme.FormattingEnabled = true;
-            this.cbxCreme.Items.AddRange(new object[] {
+            this.cbxBolas.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.cbxBolas.FormattingEnabled = true;
+            this.cbxBolas.Items.AddRange(new object[] {
             "Creme",
             "Emerc",
             "Caramellow",
             "Wollemarac"});
-            this.cbxCreme.Location = new System.Drawing.Point(63, 24);
-            this.cbxCreme.Name = "cbxCreme";
-            this.cbxCreme.Size = new System.Drawing.Size(121, 21);
-            this.cbxCreme.TabIndex = 1;
+            this.cbxBolas.Location = new System.Drawing.Point(63, 24);
+            this.cbxBolas.Name = "cbxBolas";
+            this.cbxBolas.Size = new System.Drawing.Size(121, 21);
+            this.cbxBolas.TabIndex = 1;
+            this.cbxBolas.SelectedIndexChanged += new System.EventHandler(this.cbxCreme_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -242,9 +233,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.Size = new System.Drawing.Size(43, 16);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Creme:";
+            this.label4.Text = "Bolas";
             // 
             // groupBox3
             // 
@@ -306,6 +297,7 @@
             this.btnPagar.TabIndex = 8;
             this.btnPagar.Text = "Pagar";
             this.btnPagar.UseVisualStyleBackColor = false;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // btnSair
             // 
@@ -317,27 +309,6 @@
             this.btnSair.TabIndex = 9;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
-            // 
-            // cbxQuantidade
-            // 
-            this.cbxQuantidade.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.cbxQuantidade.FormattingEnabled = true;
-            this.cbxQuantidade.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cbxQuantidade.Location = new System.Drawing.Point(329, 28);
-            this.cbxQuantidade.Name = "cbxQuantidade";
-            this.cbxQuantidade.Size = new System.Drawing.Size(72, 21);
-            this.cbxQuantidade.TabIndex = 5;
-            this.cbxQuantidade.SelectedIndexChanged += new System.EventHandler(this.cbxQuantidade_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -375,10 +346,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cbxFlocos;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbxCreme;
+        private System.Windows.Forms.ComboBox cbxBolas;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbxFrescuras;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbxCobertura;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;

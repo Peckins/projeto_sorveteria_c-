@@ -10,3 +10,9 @@ E:\Files\D.S\projeto_sorveteria\projeto_sorveteria\obj\Debug\projeto_sorveteria.
 C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\bin\Debug\projeto_sorveteria.exe.config
 C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\obj\Debug\projeto_sorveteria.exe
 C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\obj\Debug\projeto_sorveteria.pdb
+C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\bin\Debug\projeto_sorveteria.exe
+C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\bin\Debug\projeto_sorveteria.pdb
+C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\obj\Debug\projeto_sorveteria.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\obj\Debug\projeto_sorveteria.Form1.resources
+C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\obj\Debug\projeto_sorveteria.Properties.Resources.resources
+C:\Users\User\Desktop\projeto_sorveteria_c-\projeto_sorveteria\obj\Debug\projeto_sorveteria.csproj.GenerateResource.Cache
