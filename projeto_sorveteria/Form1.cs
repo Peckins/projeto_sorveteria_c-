@@ -17,53 +17,60 @@ namespace projeto_sorveteria
             InitializeComponent();
         }
 
-        public struct pedido
+        public struct pedido//Estrutura da comanda
         {
             public int quantidade;
             public double total;
             public double preco;
+            public double bolas;
+            public double flocos;
             
         }
 
+        //variaveis de configuração de comanda
         public static int quantidade;
         public static double total;
-        public static double preco = 2.75;
-        public static double bolas;
+        public static double precoSorvete = 2.75;
+        public static double precoBolas;
+        public static double? precoFlocos;
         
+        //caixa de seleção do tipo
         private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            total = preco * quantidade;
+            total = precoSorvete * quantidade;
             txtTotal.Text = total.ToString();
         }
 
+        //quantidade de sorvetes a serem feitos
         private void cbxQuantidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             quantidade = int.Parse(cbxQuantidade.Text);
-            total = preco * quantidade;
+            total = precoSorvete * quantidade;
             txtTotal.Text = total.ToString();
         }
 
+        //configuração de bolas de sorvetes
         private void cbxCreme_SelectedIndexChanged(object sender, EventArgs e)//combobox de seleção de bolas
         {
             if (cbxBolas.Text == "Creme")
             {
-                bolas = 0.50;
+                precoBolas = 0.50;
             }
             else if (cbxBolas.Text == "Emerc")
             {
-                bolas = 0.75;
+                precoBolas = 0.75;
             }
             else if (cbxBolas.Text == "Caramellow")
             {
-                bolas = 0.25;
+                precoBolas = 0.25;
             }
             else if (cbxBolas.Text == "Wollemarac")
             {
-                bolas = 0.47;
+                precoBolas = 0.47;
             }
 
-            total = preco * quantidade + bolas;
-            txtTotal.Text = total.ToString();
+            total = precoSorvete * quantidade + precoBolas;
+            txtTotal.Text = total.ToString();//exibe o total
         }
 
         private void btnPagar_Click(object sender, EventArgs e)
@@ -71,9 +78,17 @@ namespace projeto_sorveteria
 
         }
 
+        //Seleção de Flocos
         private void cbxFlocos_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (cbxFlocos.Text != null)
+            {
+                precoFlocos = double.Parse(cbxFlocos.Text);//Se a caixa de seleção não estiver vazia, a variavel armazenará o valor contido na mesma
+            }
+            else
+            {
+                precoFlocos = null;
+            }
         }
     }
 }
