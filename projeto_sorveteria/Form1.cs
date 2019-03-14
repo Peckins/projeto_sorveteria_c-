@@ -32,7 +32,10 @@ namespace projeto_sorveteria
         public static double total;
         public static double precoSorvete = 2.75;
         public static double precoBolas;
-        public static double? precoFlocos;
+        public static double precoFlocos;
+        public static double precoCobertura;
+        public static double dinheiro;
+
         
         //caixa de seleção do tipo
         private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,22 +76,43 @@ namespace projeto_sorveteria
             txtTotal.Text = total.ToString();//exibe o total
         }
 
+        //Janela de notificação de pagamento
         private void btnPagar_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         //Seleção de Flocos
         private void cbxFlocos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxFlocos.Text != null)
+            if (cbxFlocos.Text != "")
             {
                 precoFlocos = double.Parse(cbxFlocos.Text);//Se a caixa de seleção não estiver vazia, a variavel armazenará o valor contido na mesma
             }
+
+            total = precoSorvete * quantidade + precoBolas + precoFlocos;
+            txtTotal.Text = total.ToString();
+        }
+
+        //seleção de cobertura
+        private void cbxCobertura_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxFlocos.Text != "")
+            {
+                precoCobertura = double.Parse(cbxFlocos.Text);//Se a caixa de seleção não estiver vazia, a variavel armazenará o valor contido na mesma
+            }
             else
             {
-                precoFlocos = null;
+                precoCobertura = 0;
             }
+
+            total = precoSorvete * quantidade + precoBolas + precoFlocos + precoCobertura;
+            txtTotal.Text = total.ToString();
+        }
+
+        private void txtDinheiro_TextChanged(object sender, EventArgs e)
+        {
+            dinheiro = double.Parse(txtDinheiro.Text);                  
         }
     }
 }

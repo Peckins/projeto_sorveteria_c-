@@ -175,6 +175,7 @@
             this.cbxCobertura.Name = "cbxCobertura";
             this.cbxCobertura.Size = new System.Drawing.Size(148, 21);
             this.cbxCobertura.TabIndex = 6;
+            this.cbxCobertura.SelectedIndexChanged += new System.EventHandler(this.cbxCobertura_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -258,6 +259,7 @@
             this.txtDinheiro.Name = "txtDinheiro";
             this.txtDinheiro.Size = new System.Drawing.Size(100, 20);
             this.txtDinheiro.TabIndex = 7;
+            this.txtDinheiro.TextChanged += new System.EventHandler(this.txtDinheiro_TextChanged);
             // 
             // label9
             // 
