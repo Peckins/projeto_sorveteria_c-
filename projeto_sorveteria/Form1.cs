@@ -71,6 +71,10 @@ namespace projeto_sorveteria
             {
                 precoBolas = 0.47;
             }
+            else
+            {
+                precoBolas = 0;
+            }
 
             total = precoSorvete * quantidade + precoBolas;
             txtTotal.Text = total.ToString();//exibe o total
@@ -79,15 +83,35 @@ namespace projeto_sorveteria
         //Janela de notificação de pagamento
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            
+            if ((dinheiro < total) || (dinheiro <= 0))
+            {
+                MessageBox.Show("Dinheiro insuficiente!");
+            }
+            else
+            {
+                if (MessageBox.Show("Confirmar Pagamento?\nR$ " + total, "Pagamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    double troco = dinheiro - total;//variável de cálculo de troco
+
+                    this.Close();
+
+                    MessageBox.Show("Pago com sucesso!\nTroco: " + troco, "Pagamento");
+                }
+
+            }
+
         }
 
         //Seleção de Flocos
         private void cbxFlocos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxFlocos.Text != "")
+            if (cbxFlocos.Text == null)
             {
-                precoFlocos = double.Parse(cbxFlocos.Text);//Se a caixa de seleção não estiver vazia, a variavel armazenará o valor contido na mesma
+                precoFlocos = 0;//Se a caixa de seleção não estiver vazia, a variavel armazenará o valor contido na mesma
+            }
+            else
+            {
+                precoFlocos = 0.20;
             }
 
             total = precoSorvete * quantidade + precoBolas + precoFlocos;
@@ -97,13 +121,13 @@ namespace projeto_sorveteria
         //seleção de cobertura
         private void cbxCobertura_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxFlocos.Text != "")
+            if (cbxFlocos.Text == null)
             {
-                precoCobertura = double.Parse(cbxFlocos.Text);//Se a caixa de seleção não estiver vazia, a variavel armazenará o valor contido na mesma
+                precoCobertura = 0;//Se a caixa de seleção não estiver vazia, a variavel armazenará o valor contido na mesma
             }
             else
             {
-                precoCobertura = 0;
+                precoCobertura = 0.20;
             }
 
             total = precoSorvete * quantidade + precoBolas + precoFlocos + precoCobertura;
@@ -113,6 +137,11 @@ namespace projeto_sorveteria
         private void txtDinheiro_TextChanged(object sender, EventArgs e)
         {
             dinheiro = double.Parse(txtDinheiro.Text);                  
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
